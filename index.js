@@ -7,7 +7,7 @@ require("dotenv").config({ path: "./.env" });
 mongoose.connect(process.env.MONGO_URL);
 const app = express();
 
-app.use(express.static(path.join(__dirname, "dist", "index.html")));
+app.use(express.static(path.join(__dirname, "dist")));
 app.use(cors());
 app.use(express.json());
 
